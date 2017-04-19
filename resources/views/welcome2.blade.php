@@ -45,15 +45,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <a class="navbar-brand page-scroll" href="#page-top">HOME</a>
+                    <!-- <a class="navbar-brand page-scroll" href="#page-top">HOME</a> -->
                 </button>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"> HOME</a>
+                    <li>
+                        <a class="page-scroll" href="#page-top">HOME</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#detect">Hoax Detector</a>
@@ -90,28 +90,12 @@
         </div>
     </header>
 
-    <!-- dETECT Section -->
+    <!-- detect Section -->
     <section id="detect">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Detect Hoax</h2>
-                </div>
-            </div>
-            <div class="row text-center">
-                    <h4 class="text-muted">Insert the link below</h4>
-                    <input>
-                    <button>DETECT</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reliable Section -->
-    <section id="reliable"  class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">List of Reliable Website</h2>
                 </div>
             </div>
             <div class="row text-center">
@@ -133,41 +117,44 @@
         </div>
     </section>
     
-    <!-- Reliable Section -->
+    <!-- Example Section -->
     <section id="example"  class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Example of Hoax</h2>
+                    <a class="btn btn-info">See More...</a>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Reliable Section -->
+    <!-- Report Section -->
     <section id="recent">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Recent Report of Hoax</h2>
+                    <a class="btn btn-info">See More...</a>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Reliable Section -->
+    <!-- How Detect Section -->
     <section id="tips"  class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">How to detect Hoax</h2>
+                    <a class="btn btn-info">See More...</a>
                 </div>
             </div>
             
         </div>
     </section>
     
-    <!-- Reliable Section -->
+    <!-- About Us Section -->
     <section id="about">
         <div class="container">
             <div class="row">
