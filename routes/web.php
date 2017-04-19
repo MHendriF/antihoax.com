@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 route::resource('login', 'AdminController');
+Route::post('auth/login', 'Auth\LoginController@postLogin');

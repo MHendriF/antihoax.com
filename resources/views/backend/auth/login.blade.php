@@ -8,27 +8,27 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="{{ url('/home') }}"><b>Login</b></a>
+            <a href="{{ url('/home') }}"><b>Login</b> AntiHoax</a>
         </div><!-- /.login-logo -->
 
-    {{-- @if (count($errors) > 0)
+    @if (count($errors) > 0)
         <div class="alert alert-danger">
-            <strong>Whoops!</strong> {{ trans('message.someproblems') }}<br><br>
+            <strong>Whoops!</strong> There were some problems with your input.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
         </div>
-    @endif --}}
+    @endif
 
     <div class="login-box-body">
     <p class="login-box-msg"> Sign in to start your session </p>
     <form action="{{ url('/auth/login') }}" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group has-feedback">
-            <input type="email" class="form-control" placeholder="Email" name="email"/>
-            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            <input type="text" class="form-control" placeholder="Username" name="username"/>
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
             <input type="password" class="form-control" placeholder="Password" name="password"/>
