@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\User;
+use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -35,5 +37,14 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'logout']);
+    }
+
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name'      => 'required',
+            'username'       => 'required',
+            'password'  => 'required|confirmed',
+        ]);
     }
 }
