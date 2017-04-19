@@ -101,53 +101,56 @@
             <div class="row text-center">
                     <h4 class="text-muted">Insert the link below</h4>
                     <input>
-                    <button>DETECT</button>
+                    <button href="{{route('hoaxdetector.index')}}">DETECT</button>
             </div>
         </div>
     </section>
     
     <!-- Reliable Section -->
-    <section id="reliable_site">
+    <section id="reliable_site" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">List of Reliable Website</h2>
+                    
+                    <a href="{{route('reliablesite.index')}}" class="btn btn-info">See More...</a>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Example Section -->
-    <section id="example"  class="bg-light-gray">
+    <section id="example">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Example of Hoax</h2>
-                    <a class="btn btn-info">See More...</a>
+                    <a  href="{{route('hoaxexample.index')}}" class="btn btn-info">See More...</a>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Report Section -->
-    <section id="recent">
+    <section id="recent" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Recent Report of Hoax</h2>
-                    <a class="btn btn-info">See More...</a>
+                    <a href="{{route('recentreport.index')}}" class="btn btn-info">See More...</a>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- How Detect Section -->
-    <section id="tips"  class="bg-light-gray">
+    <section id="tips">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">How to detect Hoax</h2>
-                    <a class="btn btn-info">See More...</a>
+                    <a href="{{route('tips.index')}}" class="btn btn-info">See More...</a>
+                    
                 </div>
             </div>
             
@@ -155,11 +158,39 @@
     </section>
     
     <!-- About Us Section -->
-    <section id="about">
+    <section id="about" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About Us</h2>
+                    
+                    <h3>"We concern to prevent fake news around the world."</h3>
+                    
+                    <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">M. Hendri Febriansyah</h4>
+                    <h4 class="service-heading">5114100036</h4>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Andy Yohanes H</h4>
+                    <h4 class="service-heading">5114100064</h4>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Prasetyo Nugrohadi</h4>
+                    <h4 class="service-heading">5114100070</h4>
+                </div>
+                  
                 </div>
             </div>
             

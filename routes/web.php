@@ -16,3 +16,8 @@ Route::get('/', function () {
 });
 
 route::resource('login', 'AdminController');
+route::resource('hoaxdetector', 'HoaxDetectorController');
+route::resource('reliablesite', 'ReliableSiteController');
+route::resource('hoaxexample', 'HoaxExampleController');
+route::resource('recentreport', 'RecentReportController');
+route::resource('tips', 'TipsController');
