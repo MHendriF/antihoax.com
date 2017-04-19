@@ -112,8 +112,13 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">List of Reliable Website</h2>
-                    
-                    <a href="{{route('reliablesite.index')}}" class="btn btn-info">See More...</a>
+                    <h3><a>1. http://www.bartleby.com/</a></h3>
+                    <h3><a>2. http://www.dictionary.com/</a></h3>
+                    <h3><a>3. http://easybib.com/</a></h3>
+                    <h3><a>4. http://books.google.com/</a></h3>
+                    <h3><a>5. http://www.gpoaccess.gov/</a></h3>
+                    <h3><a>6. http://www.infoplease.com/</a></h3><br>
+<!--                    <a href="{{route('reliablesite.index')}}" class="btn btn-info">See More...</a>-->
                 </div>
             </div>
         </div>
@@ -125,6 +130,54 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Example of Hoax</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                        <img src="frontend/img/hoax.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-caption">
+                        <h4>HOAX 1</h4>
+                        <p class="text-muted">Description Hoax 1</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                        <img src="frontend/img/hoax.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-caption">
+                        <h4>HOAX 2</h4>
+                        <p class="text-muted">Description Hoax 2</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                        <img src="frontend/img/hoax.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-caption">
+                        <h4>HOAX 3</h4>
+                        <p class="text-muted">Description Hoax 3</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                        <img src="frontend/img/hoax.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-caption">
+                        <h4>HOAX 4</h4>
+                        <p class="text-muted">Description Hoax 4</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                        <img src="frontend/img/hoax.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-caption">
+                        <h4>HOAX 5</h4>
+                        <p class="text-muted">Description Hoax 5</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                        <img src="frontend/img/hoax.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-caption">
+                        <h4>HOAX 6</h4>
+                        <p class="text-muted">Description Hoax 6</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
                     <a  href="{{route('hoaxexample.index')}}" class="btn btn-info">See More...</a>
                 </div>
             </div>
@@ -149,8 +202,14 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">How to detect Hoax</h2>
-                    <a href="{{route('tips.index')}}" class="btn btn-info">See More...</a>
                     
+                    <h3> 1. Check the URL</h3>
+                    <h3> 2. Read the About page</h3>
+                    <h3> 3. Check the quote</h3>
+                    <h3> 4. Check the link inside the pages</h3>
+                    <h3> 5. Do reverse image search</h3>
+                    <h3> 6. If it seems so perfect, slow down!</h3>
+                    <br>                    
                 </div>
             </div>
             
@@ -164,7 +223,7 @@
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About Us</h2>
                     
-                    <h3>"We concern to prevent fake news around the world."</h3>
+                    <h3>"We concern to prevent the spread of fake news around the world."</h3>
                     
                     <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -201,7 +260,7 @@
         <div class="container" class="bg-light-gray">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; SI UPT FASOR 2016</span>
+                    <span class="copyright">Copyright &copy; ANOX TEAM 2017</span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
