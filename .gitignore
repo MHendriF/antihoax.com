@@ -1,10 +1,15 @@
 /node_modules
 /public/hot
+/public/backend/dist/img
+!/public/backend/backend/plugins/iCheck
+!/public/backend/backend/plugins/jQuery
+/public/backend/backend/plugins/
 /public/storage
 /storage/*.key
 /vendor
 /.idea
 /.vagrant
+/template_web
 Homestead.json
 Homestead.yaml
 .env
