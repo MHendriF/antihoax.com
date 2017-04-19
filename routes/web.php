@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 route::resource('login', 'AdminController');
+Route::post('auth/login', 'Auth\LoginController@postLogin');
 route::resource('hoaxdetector', 'HoaxDetectorController');
 route::resource('reliablesite', 'ReliableSiteController');
 route::resource('hoaxexample', 'HoaxExampleController');
