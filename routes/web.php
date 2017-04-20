@@ -15,10 +15,14 @@ Route::get('/', function () {
     return view('welcome2');
 });
 
-route::resource('login', 'AdminController');
-Route::post('auth/login', 'Auth\LoginController@postLogin');
+// route::resource('login', 'AdminController');
+// Route::post('auth/login', 'Auth\LoginController@login');
+
 route::resource('hoaxdetector', 'HoaxDetectorController');
 route::resource('reliablesite', 'ReliableSiteController');
 route::resource('hoaxexample', 'HoaxExampleController');
 route::resource('recentreport', 'RecentReportController');
 route::resource('tips', 'TipsController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
