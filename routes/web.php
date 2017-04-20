@@ -11,8 +11,11 @@
 |
 */
 
+use App\Website;
+
 Route::get('/', function () {
-    return view('welcome2');
+	$data = Website::all();
+    return view('welcome2', compact('data'));
 });
 
 // route::resource('login', 'AdminController');

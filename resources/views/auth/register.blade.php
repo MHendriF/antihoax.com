@@ -33,7 +33,7 @@
                 </div>
                 <div class="form-group has-feedback">
                     <input type="text" class="form-control" placeholder="Username" name="username" value="{{ old('username') }}"/>
-                    <span class="glyphicon glyphicon-cloud form-control-feedback"></span>
+                    <span class="fa fa-user-secret form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
                     <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}"/>

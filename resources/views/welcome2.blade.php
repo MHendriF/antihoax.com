@@ -100,7 +100,7 @@
             </div>
             <div class="row text-center">
                     <h4 class="text-muted">Insert the link below</h4>
-                    <input>
+                    <textarea class="form-control" rows="3" placeholder="Masukkan alamat website" name=""></textarea>
                     <button href="{{route('hoaxdetector.index')}}">DETECT</button>
             </div>
         </div>
@@ -110,15 +110,34 @@
     <section id="reliable_site" class="bg-light-gray">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">List of Reliable Website</h2>
-                    <h3><a>1. http://www.bartleby.com/</a></h3>
-                    <h3><a>2. http://www.dictionary.com/</a></h3>
-                    <h3><a>3. http://easybib.com/</a></h3>
-                    <h3><a>4. http://books.google.com/</a></h3>
-                    <h3><a>5. http://www.gpoaccess.gov/</a></h3>
-                    <h3><a>6. http://www.infoplease.com/</a></h3><br>
-<!--                    <a href="{{route('reliablesite.index')}}" class="btn btn-info">See More...</a>-->
+                <div class="col-lg-12">
+                    <h2 class="section-heading text-center">List of Reliable Website</h2>
+                    <div class="box-body">
+                      <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <th><center>Alamat Website</center></th>
+                          <th><center>Category</center></th>
+                          <th><center>Verifikasi</center></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                          @foreach($data as $index => $web)       
+                          <tr>
+                            @if($web->category == 'Valid' && $web->verifikasi == 'Done')
+                                {{-- <td>{{ $index +1 }}</td> --}}
+                                <td>{{ $web->alamat }}</td>
+                                <td>{{ $web->category }}</td>
+                                <td>{{ $web->verifikasi }} <button class="btn btn-sm btn-success pull-right fa fa-check"></button></td>
+                            @endif
+                          </tr>
+                          @endforeach
+
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- /.box-body -->
+
                 </div>
             </div>
         </div>

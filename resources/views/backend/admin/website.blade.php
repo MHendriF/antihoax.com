@@ -42,53 +42,24 @@
                       <th>ID</th>
                       <th>Alamat Website</th>
                       <th>Category</th>
-                      <th>Validasi</th>
+                      <th>Verifikasi</th>
                       {{-- <th>Action</th> --}}
                     </tr>
                     </thead>
                     <tbody>
+                      @foreach($data as $index => $web)       
                       <tr>
-                        <td>1</td>
-                        <td>WWW.BARTLEBY.COM</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
+                        <td>{{ $index +1 }}</td>
+                        <td>{{ $web->alamat }}</td>
+                        <td>{{ $web->category }}</td>
+                        @if($web->verifikasi == 'Done')
+                        <td>{{ $web->verifikasi }} <button class="btn btn-sm btn-success pull-right fa fa-check"></button></td>
+                        @else
+                        <td>{{ $web->verifikasi }} <button class="btn btn-sm btn-danger pull-right fa fa-close"></button></td>
+                        @endif
                       </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>WWW.DICTIONARY.COM</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>EASYBIB.COM</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>BOOKS.GOOGLE.COM</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>WWW.GPOACCESS.GOV</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>WWW.INFOPLEASE.COM</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td>www.indosiar.com</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
-                      </tr>
+                      @endforeach
+
                     </tbody>
                   </table>
                 </div>

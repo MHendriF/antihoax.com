@@ -4,14 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Website;
+
 class AdminController extends Controller
 {
     public function index()
     {
     	//return view('backend.auth.login');
-        return view('backend.admin.website');
+        $data = Website::all();
+        return view('backend.admin.website', compact('data'));
     }
-
 
     public function create()
     {
@@ -25,7 +27,16 @@ class AdminController extends Controller
 
     public function store(Request $request)
     {
-       
+       $this->validate($request, array(
+            'alamat'     => 'required|max:100',
+            'category'   => 'required',
+            'verifikasi' => 'required'
+            ));
+
+        Website::create($request->all());
+
+        //Session::flash('new', 'New room was successfully added!');
+        return redirect('website');
     }
 
  	public function show($id)

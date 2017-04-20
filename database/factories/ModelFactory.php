@@ -22,3 +22,13 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+
+// Modal Factory Website
+$factory->define(App\Website::class, function (Faker\Generator $faker) {
+    return [
+        'alamat'   	=> $faker->url,
+        'category'    => $faker->randomElement($array = array ('Valid','Hoax')),
+        'verifikasi'  => $faker->randomElement($array = array ('Done','Not yet')),
+    ];
+});
