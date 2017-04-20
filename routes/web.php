@@ -26,3 +26,5 @@ route::resource('tips', 'TipsController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+route::resource('website', 'AdminController');
+route::get('history', 'AdminController@history');

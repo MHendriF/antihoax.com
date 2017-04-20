@@ -20,12 +20,16 @@
 
         <ul class="sidebar-menu">
             <li class="header">Main Navigation</li>
-            <li class="active"><a href="{{ url('home') }}"><i class='fa fa-home'></i> <span>Home</span></a></li>
-            <li>
-              <a href="{{ url('viewschedule') }}">
-                <i class="fa fa-calendar"></i> <span>View</span>
-              </a>
+            <li><a href="{{ url('home') }}"><i class='fa fa-home'></i> <span>Home</span></a></li>
+            {{-- <li><a href="{{ url('website') }}"><i class="fa fa-calendar"></i> <span>Website</span></a></li> --}}
+            <li class="treeview">
+              <a href="#"><i class='glyphicon glyphicon-globe'></i> <span>Website</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('website/create') }}"><i class="fa fa-globe"></i>Add Website</a></li>
+                    <li><a href="{{ url('website') }}"><i class="fa fa-list"></i>List Website</a></li>
+                </ul>
             </li>
+            <li><a href="{{ url('history') }}"><i class="fa fa-history"></i> <span>History</span></a></li>
           </ul>
 
     </section>

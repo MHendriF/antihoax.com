@@ -4,6 +4,9 @@
 <script src="{{ asset('/backend/plugins/jQuery/jquery-2.2.3.min.js') }}" type="text/javascript"></script>
 <!-- Bootstrap 3.3.6 JS -->
 <script src="{{ asset('/backend/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
+<!-- DataTables -->
+<script src="{{ asset('/backend/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('/backend/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
 <!-- Select2 -->
 <script src="{{ asset('/backend/plugins/select2/select2.full.min.js') }}" type="text/javascript"></script>
 <!-- InputMask -->

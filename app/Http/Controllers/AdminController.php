@@ -8,13 +8,19 @@ class AdminController extends Controller
 {
     public function index()
     {
-    	return view('backend.auth.login');
+    	//return view('backend.auth.login');
+        return view('backend.admin.website');
     }
 
 
     public function create()
     {
-        
+        return view('backend.admin.add_website');
+    }
+
+    public function history()
+    {
+        return view('backend.admin.history');
     }
 
     public function store(Request $request)

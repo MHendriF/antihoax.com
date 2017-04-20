@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{{ asset('/backend/dist/css/AdminLTE.min.css') }}">
     <!-- iCheck -->
     <link rel="stylesheet" href="{{ asset('/backend/plugins/iCheck/square/blue.css') }}">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset('/backend/plugins/datatables/dataTables.bootstrap.css')}}">
     <!-- Skin -->
     <link rel="stylesheet" href="{{ asset('/backend/dist/css/skins/_all-skins.min.css') }}">
     
