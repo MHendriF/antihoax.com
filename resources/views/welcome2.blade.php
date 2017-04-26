@@ -59,9 +59,6 @@
                         <a class="page-scroll" href="#detect">Hoax Detector</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#reliable_site">Reliable Site</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#example">Example of Hoax</a>
                     </li>
                     <li>
@@ -91,7 +88,7 @@
     </header>
 
     <!-- detect Section -->
-    <section id="detect">
+    <section id="detect"  class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -101,44 +98,8 @@
             <div class="row text-center">
                     <h4 class="text-muted">Insert the link below</h4>
                     <textarea class="form-control" rows="3" placeholder="Masukkan alamat website" name=""></textarea>
-                    <button href="{{route('hoaxdetector.index')}}">DETECT</button>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Reliable Section -->
-    <section id="reliable_site" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="section-heading text-center">List of Reliable Website</h2>
-                    <div class="box-body">
-                      <table id="example1" class="table table-bordered table-striped">
-                        <thead>
-                        <tr>
-                          <th><center>Alamat Website</center></th>
-                          <th><center>Category</center></th>
-                          <th><center>Verifikasi</center></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                          @foreach($data as $index => $web)       
-                          <tr>
-                            @if($web->category == 'Valid' && $web->verifikasi == 'Done')
-                                {{-- <td>{{ $index +1 }}</td> --}}
-                                <td>{{ $web->alamat }}</td>
-                                <td>{{ $web->category }}</td>
-                                <td>{{ $web->verifikasi }} <button class="btn btn-sm btn-success pull-right fa fa-check"></button></td>
-                            @endif
-                          </tr>
-                          @endforeach
-
-                        </tbody>
-                      </table>
-                    </div>
-                    <!-- /.box-body -->
-
-                </div>
+                    <br>
+                    <button class="btn btn-success" href="{{route('hoaxdetector.index')}}">DETECT</button>
             </div>
         </div>
     </section>
