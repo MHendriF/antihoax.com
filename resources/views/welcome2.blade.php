@@ -51,6 +51,9 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <img style="height:55px;width:55px;" src="frontend/img/logo.png">
+                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a class="page-scroll" href="#page-top">HOME</a>
@@ -61,9 +64,9 @@
                     <li>
                         <a class="page-scroll" href="#example">Example of Hoax</a>
                     </li>
-                    {{-- <li>
-                        <a class="page-scroll" href="#recent">Recent Report</a>
-                    </li> --}}
+                    <li>
+                        <a class="page-scroll" href="#recent">Recent Search</a>
+                    </li>
                     <li>
                         <a class="page-scroll" href="#tips">How to Detect Hoax</a>
                     </li>
@@ -88,19 +91,80 @@
     </header>
 
     <!-- detect Section -->
-    <section id="detect"  class="bg-light-gray">
+    <section id="detect" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Detect Hoax</h2>
+                    <h2 class="section-heading">Hoax Detector</h2>
                 </div>
             </div>
             <div class="row text-center">
-                    <h4 class="text-muted">Insert the link below</h4>
-                    <textarea class="form-control" rows="3" placeholder="Masukkan alamat website" name=""></textarea>
-                    <br>
-                    <button class="btn btn-success" href="{{route('hoaxdetector.index')}}">DETECT</button>
+<!--                    <h4 class="text-muted">Insert the link below</h4>-->
+                    <div class="col-lg-12" style="margin:auto">
+                        <div class="col-lg-2">
+                        </div>
+                        <form id="check" type="form" method="post">
+                        <div class="col-lg-7">
+                            <textarea id="website" style="float:right;" type="text"  class="form-control"  placeholder="Masukkan alamat website" name="website"></textarea>
+                        </div>
+                        <div class="col-lg-2">
+                            <a href="javascript:getHref();">
+                                <img src="../public/frontend/img/wwwfind.png" style="float:left; max-width:64px; max-height:64px" class="btn btn-info">
+                            </a>
+                        </div>
+                        </form>
+                    </div>
             </div>
+            <br>
+            <?php
+                if(isset($_GET['website']) && $_GET['website']!=''){
+                    echo '
+                    <div class="row">
+                    <h4 class="text-center">-------------------------------------------------------------------------------------------------------------</h4>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <table id="materialPlate" class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <th>NAME</th>
+                          <th>DESCRIPTION</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>URL</td>
+                                <td>aaaaaaaaaaaaaaa.com</td>
+                            </tr>
+                            <tr>
+                                <td>OWNER</td>
+                                <td>AAAAA</td>
+                            </tr>
+                            <tr>
+                                <td>TITLE</td>
+                                <td>AAAA AAAA AAAAA</td>
+                            </tr>
+                            <tr>
+                                <td>SCORE</td>
+                                <td>80% HOAX</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                        <h4> REFERENCE: </h4>
+                        <h5>News 1 Title 1 (www.news1.com)</h5>
+                        <h7>This is the news description. You can chek here if you want</h7>
+                        <h5>News 2 Title 2 (www.news2.com)</h5>
+                        <h7>This is the news description. You can chek here if you want</h7>
+                        <h5>News 3 Title 3 (www.news3.com)</h5>
+                        <h7>This is the news description. You can chek here if you want</h7>
+                        <h5>News 4 Title 4 (www.news4.com)</h5>
+                        <h7>This is the news description. You can chek here if you want</h7>
+                        <h5>News 5 Title 5 (www.news5.com)</h5>
+                        <h7>This is the news description. You can chek here if you want</h7>
+                    </div>
+                </div>
+                    ';
+                }
+            ?>
         </div>
     </section>
     
@@ -165,30 +229,48 @@
     </section>
     
     <!-- Report Section -->
-    {{-- <section id="recent" class="bg-light-gray">
+    <section id="recent" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Recent Report of Hoax</h2>
+                    <h2 class="section-heading">Recent Search of Hoax</h2>
                     <a href="{{route('recentreport.index')}}" class="btn btn-info">See More...</a>
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
     
     <!-- How Detect Section -->
     <section id="tips">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">How to detect Hoax</h2>
+                <div class="col-lg-12">
+                    <h2 class="section-heading text-center" style="margin-bottom:40px">How to detect Hoax</h2>
                     
-                    <h3> 1. Check the URL</h3>
-                    <h3> 2. Read the About page</h3>
-                    <h3> 3. Check the quote</h3>
-                    <h3> 4. Check the link inside the pages</h3>
-                    <h3> 5. Do reverse image search</h3>
-                    <h3> 6. If it seems so perfect, slow down!</h3>
+                    <div class="col-lg-4" style="margin-bottom:20px">
+                        <img style="width:220px; height:220px" src="frontend/img/checkurl.png">
+                        <h3> 1. Check the URL</h3>
+                    </div>
+                    <div class="col-lg-4" style="margin-bottom:20px">
+                        <img style="width:220px; height:220px" src="frontend/img/about-icon.png">
+                        <h3> 2. Read the About page</h3>
+                    </div>
+                    <div class="col-lg-4" style="margin-bottom:20px">
+                        <img style="width:220px; height:220px" src="frontend/img/quote.png">
+                        <h3> 3. Check the quote</h3>
+                    </div>
+                    <div class="col-lg-4">
+                        <img style="width:220px; height:220px" src="frontend/img/checklink.png">
+                        <h3> 4. Check the link inside the pages</h3>
+                    </div>
+                    <div class="col-lg-4">
+                        <img style="width:220px; height:220px" src="frontend/img/reverse.png">
+                        <h3> 5. Do reverse image search</h3>
+                    </div>
+                    <div class="col-lg-4">
+                        <img style="width:220px; height:220px" src="frontend/img/calm.jpg">
+                        <h3> 6. If it seems so perfect, slow down!</h3>
+                    </div>
                     <br>                    
                 </div>
             </div>
@@ -203,7 +285,7 @@
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About Us</h2>
                     
-                    <h3>"We concern to prevent the spread of fake news around the world."</h3>
+                    <h3 style="margin-bottom:60px">"We concern to prevent the spread of fake news around the world."</h3>
                     
                     <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -277,7 +359,23 @@
     <script src="{{ asset('/frontend/js/contact_me.js') }}"></script>
     <!-- Custom Theme JavaScript -->
     <script src="{{ asset('/frontend/js/agency.js') }}"></script>
-
+    <script>
+        function httpGet(theUrl)
+        {
+            var xmlHttp = new XMLHttpRequest();
+            var website = document.getElementById("website").value;
+            var send = "website="+website;
+            //alert(send);
+            xmlHttp.open("GET", theUrl+"?"+website, true); // false for synchronous request
+            xmlHttp.send(website);
+            return xmlHttp.responseText;
+        }
+        function getHref()
+        {
+            var link = ".?website="+document.getElementById("website").value
+            location = link;
+            return false;
+        }
+    </script>
 </body>
-
 </html>
