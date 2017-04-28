@@ -61,9 +61,9 @@
                     <li>
                         <a class="page-scroll" href="#example">Example of Hoax</a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a class="page-scroll" href="#recent">Recent Report</a>
-                    </li>
+                    </li> --}}
                     <li>
                         <a class="page-scroll" href="#tips">How to Detect Hoax</a>
                     </li>
@@ -165,7 +165,7 @@
     </section>
     
     <!-- Report Section -->
-    <section id="recent" class="bg-light-gray">
+    {{-- <section id="recent" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -174,7 +174,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     
     <!-- How Detect Section -->
     <section id="tips">
