@@ -40,10 +40,8 @@
                     <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Alamat Website</th>
+                      <th>Domain / Alamat Website</th>
                       <th>Category</th>
-                      <th>Verifikasi</th>
-                      {{-- <th>Action</th> --}}
                     </tr>
                     </thead>
                     <tbody>
@@ -52,11 +50,6 @@
                         <td>{{ $index +1 }}</td>
                         <td>{{ $web->alamat }}</td>
                         <td>{{ $web->category }}</td>
-                        @if($web->verifikasi == 'Done')
-                        <td>{{ $web->verifikasi }} <button class="btn btn-sm btn-success pull-right fa fa-check"></button></td>
-                        @else
-                        <td>{{ $web->verifikasi }} <button class="btn btn-sm btn-danger pull-right fa fa-close"></button></td>
-                        @endif
                       </tr>
                       @endforeach
 

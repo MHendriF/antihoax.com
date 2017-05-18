@@ -31,7 +31,7 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">History Pencarian Website</h3>
+                  <h3 class="box-title">History Pencarian</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -39,55 +39,22 @@
                     <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Alamat Website</th>
-                      <th>Category</th>
-                      <th>Validasi</th>
-                      {{-- <th>Action</th> --}}
+                      <th>Kata Pencarian</th>
+                      <th>Valid</th>
+                      <th>Hoax</th>
+                      <th>Unknown</th>
                     </tr>
                     </thead>
                     <tbody>
+                      @foreach($data as $index => $history)       
                       <tr>
-                        <td>1</td>
-                        <td>WWW.BARTLEBY.COM</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
+                        <td>{{ $index +1 }}</td>
+                        <td>{{ $history->kata }}</td>
+                        <td>{{ $history->valid }} %</td>
+                        <td>{{ $history->hoax }} %</td>
+                        <td>{{ $history->unknown }} %</td>
                       </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>WWW.DICTIONARY.COM</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>EASYBIB.COM</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>BOOKS.GOOGLE.COM</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>WWW.GPOACCESS.GOV</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>WWW.INFOPLEASE.COM</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td>www.indosiar.com</td>
-                        <td>Valid</td>
-                        <td>Selesai</td>
-                      </tr>
+                      @endforeach
                     </tbody>
                   </table>
                 </div>

@@ -51,32 +51,16 @@
                   <div class="box-body">
                     <div class="form-group">
                       <label>Alamat Website</label>
-                      <textarea class="form-control" rows="3" placeholder="Masukkan alamat website" name="alamat"></textarea>
+                      <textarea class="form-control" rows="3" placeholder="Masukkan alamat website atau domain" name="alamat"></textarea>
                     </div>
                     <div class="form-group">
                       <label>Category</label>
                        <select class="form-control select2" style="width: 100%;" name="category">
                         <option selected="selected">Valid</option>
-                        <option>Hoax</option>
+                        <option>Blacklist</option>
                         <option>Unknown</option>
                       </select>
                     </div>
-                    <div class="form-group">
-                      <label>Verifikasi</label>
-                      <ul>
-                        <li>
-                          <label>Yes
-                            <input type="radio" name="verifikasi" value="Done" class="flat-red">
-                          </label>
-                        </li>
-                        <li>
-                          <label>No
-                            <input type="radio" name="verifikasi" value="Not yet" class="flat-red">
-                          </label>    
-                        </li>
-                      </ul>
-                    </div>
-                    
                   </div>
                   <!-- /.box-body -->
                   <div class="box-footer">

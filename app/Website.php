@@ -9,6 +9,6 @@ class Website extends Model
     protected $table = 'websites';
 
     protected $fillable = [
-        'alamat', 'category', 'verifikasi',
+        'alamat', 'category',
     ];
 }

@@ -17,7 +17,6 @@ class CreateWebsitesTable extends Migration
             $table->increments('id');
             $table->string('alamat');
             $table->string('category');
-            $table->string('verifikasi');
             $table->timestamps();
         });
     }
