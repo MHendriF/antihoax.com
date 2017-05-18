@@ -18,6 +18,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('/frontend/css/agency.css') }}">
 
+    <!-- Custom Sendiri -->
+    {{-- <link rel="stylesheet" href="{{ asset('/frontend/css/custom.css') }}"> --}}
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -25,12 +28,6 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -52,9 +49,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <img style="height:55px;width:55px;" src="frontend/img/logo.png">
+                    <img style="height:55px;width:55px;margin-right: 30px;" src="frontend/img/logo.png">
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-left">
                     <li>
                         <a class="page-scroll" href="#page-top">HOME</a>
                     </li>
@@ -103,18 +100,25 @@
                     <div class="col-lg-12" style="margin:auto">
                         <div class="col-lg-2">
                         </div>
-                        <form id="check" type="form" method="post">
-                        <div class="col-lg-7">
-                            <textarea id="website" style="float:right;" type="text"  class="form-control"  placeholder="Masukkan alamat website" name="website"></textarea>
-                        </div>
-                        <div class="col-lg-2">
-                            <a href="javascript:getHref();">
-                                <img src="../public/frontend/img/wwwfind.png" style="float:left; max-width:64px; max-height:64px" class="btn btn-info">
-                            </a>
-                        </div>
+
+                        <form method="get" action="{{ url('search') }}">
+                            <div class="col-lg-7">
+                                <input id="website" style="float:right;width:90%;height: 40px;" type="text" class="form-control"  placeholder="Search" name="search"/>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-sm">Go</button>
+                            {{-- <div class="col-lg-2">
+                                <a href="javascript:getHref();">
+                                    <img src="{{asset('/frontend/img/wwwfind.png')}}" style="float:left; max-width:64px; max-height:64px" class="btn btn-info">
+                                </a>
+                            </div> --}}
                         </form>
+
                     </div>
             </div>
+
+
+                
+
             <br>
             <?php
                 if(isset($_GET['website']) && $_GET['website']!=''){
@@ -359,7 +363,7 @@
     <script src="{{ asset('/frontend/js/contact_me.js') }}"></script>
     <!-- Custom Theme JavaScript -->
     <script src="{{ asset('/frontend/js/agency.js') }}"></script>
-    <script>
+    {{-- <script>
         function httpGet(theUrl)
         {
             var xmlHttp = new XMLHttpRequest();
@@ -377,5 +381,23 @@
             return false;
         }
     </script>
+
+    <script>
+            $(document).ready(function() {
+                // if text input field value is not empty show the "X" button
+                $("#field").keyup(function() {
+                    $("#x").fadeIn();
+                    if ($.trim($("#field").val()) == "") {
+                        $("#x").fadeOut();
+                    }
+                });
+                // on click of "X", delete input field value and hide "X"
+                $("#x").click(function() {
+                    $("#field").val("");
+                    $(this).hide();
+                });
+            });
+
+    </script> --}}
 </body>
 </html>

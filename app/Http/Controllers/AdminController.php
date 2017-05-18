@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Website;
+use App\History;
+
 
 class AdminController extends Controller
 {
@@ -15,22 +17,23 @@ class AdminController extends Controller
         return view('backend.admin.website', compact('data'));
     }
 
+    public function history()
+    {
+        //return view('backend.auth.login');
+        $data = History::all();
+        return view('backend.admin.history', compact('data'));
+    }
+
     public function create()
     {
         return view('backend.admin.add_website');
-    }
-
-    public function history()
-    {
-        return view('backend.admin.history');
     }
 
     public function store(Request $request)
     {
        $this->validate($request, array(
             'alamat'     => 'required|max:100',
-            'category'   => 'required',
-            'verifikasi' => 'required'
+            'category'   => 'required'
             ));
 
         Website::create($request->all());
