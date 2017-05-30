@@ -374,6 +374,28 @@
         </div>
     </section>
 
+    <!-- Help Section -->
+    <section id="help">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">HELP</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    
+                </div>
+                <div class="col-sm-4">
+                    
+                </div>
+                <div class="col-sm-4">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <footer>
         <div class="container">
             <div class="row">
