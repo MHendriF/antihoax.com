@@ -32,6 +32,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 route::resource('website', 'AdminController');
+route::resource('news', 'NewsController');
+
 route::get('history', 'AdminController@history');
 Route::get('result', 'HoaxDetectorController@result');
 //Route::get('search', 'SearchController@search');

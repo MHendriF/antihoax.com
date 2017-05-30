@@ -29,6 +29,13 @@
                     <li><a href="{{ url('website') }}"><i class="fa fa-list"></i>List Website</a></li>
                 </ul>
             </li>
+            <li class="treeview">
+              <a href="#"><i class='fa fa-newspaper-o'></i> <span>News</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('news/create') }}"><i class="fa fa-newspaper-o"></i>Add News</a></li>
+                    <li><a href="{{ url('news') }}"><i class="fa fa-list"></i>List News</a></li>
+                </ul>
+            </li>
             <li><a href="{{ url('history') }}"><i class="fa fa-history"></i> <span>History</span></a></li>
           </ul>
 

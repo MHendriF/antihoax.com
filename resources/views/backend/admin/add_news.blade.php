@@ -2,7 +2,7 @@
 
 <html lang="en">
 
-@section('htmlheader_title', 'Add Website')
+@section('htmlheader_title', 'Add News')
     @include('backend.layouts.includes.htmlheader')
 @show
 
@@ -17,8 +17,8 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-    @section('contentheader_title', 'Add Website')
-    @section('contentheader_message', 'Add Website')
+    @section('contentheader_title', 'Add News')
+    @section('contentheader_message', 'Add News')
         @include('backend.layouts.partials.contentheader')
         
         <!-- Main content -->
@@ -31,7 +31,7 @@
               <!-- general form elements -->
               <div class="box box-primary">
                  <div class="register-logo">
-                    <b>Form Daftar Website</b>
+                    <b>Form Add News</b>
                 </div>
                 <!-- /.box-header -->
                 @if (count($errors) > 0)
@@ -46,25 +46,23 @@
                 @endif
 
                 <!-- form start -->
-                <form action="{{ url('website') }}" method="post" >
+                <form action="{{ url('news') }}" method="post" >
                   {{ csrf_field() }}
                   <div class="box-body">
                     <div class="form-group">
-                      <label>Alamat Website</label>
-                      <textarea class="form-control" rows="3" placeholder="Masukkan alamat website atau domain" name="alamat"></textarea>
+                      <label>Key word search</label>
+                      <input class="form-control" type="text" name="kata" placeholder="Enter search word">
                     </div>
                     <div class="form-group">
                       <label>Category</label>
-                       <select class="form-control select2" style="width: 100%;" name="category">
+                       <select class="form-control select2" name="category" style="width: 100%;">
                         <option selected="selected">Valid</option>
-                        <option>Blacklist</option>
-                        <option>Unknown</option>
+                        <option>Hoax</option>
                       </select>
                     </div>
                   </div>
                   <!-- /.box-body -->
                   <div class="box-footer">
-                    {{-- <button type="submit" class="btn btn-default">Cancel</button> --}}
                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
                   </div>
                   <!-- /.box-footer -->
@@ -88,5 +86,8 @@
 @section('scripts')
     @include('backend.layouts.includes.scripts')
 @show
+
+  
+
 </body>
 </html>

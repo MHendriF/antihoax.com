@@ -9,19 +9,9 @@
 <script src="{{ asset('/backend/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
 <!-- Select2 -->
 <script src="{{ asset('/backend/plugins/select2/select2.full.min.js') }}" type="text/javascript"></script>
-<!-- InputMask -->
-<script src="{{ asset('/backend/plugins/input-mask/jquery.inputmask.js') }}" type="text/javascript"></script>
-<script src="{{ asset('/backend/plugins/input-mask/jquery.inputmask.date.extensions.js') }}" type="text/javascript"></script>
-<script src="{{ asset('/backend/plugins/input-mask/jquery.inputmask.extensions.js') }}" type="text/javascript"></script>
+
 <!-- date-range-picker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js" type="text/javascript"></script>
-<script src="{{ asset('/backend/plugins/daterangepicker/daterangepicker.js') }}" type="text/javascript"></script>
-<!-- bootstrap datepicker -->
-<script src="{{ asset('/backend/plugins/datepicker/bootstrap-datepicker.js') }}" type="text/javascript"></script>
-<!-- bootstrap color picker -->
-<script src="{{ asset('/backend/plugins/colorpicker/bootstrap-colorpicker.min.js') }}" type="text/javascript"></script>
-<!-- bootstrap time picker -->
-<script src="{{ asset('/backend/plugins/timepicker/bootstrap-timepicker.min.js') }}" type="text/javascript"></script>
 <!-- iCheck 1.0.1 -->
 <script src="{{ asset('/backend/plugins/iCheck/icheck.min.js') }}" type="text/javascript"></script>
 <!-- FastClick -->
@@ -31,8 +21,12 @@
 <!-- AdminLTE App -->
 {{-- <script src="{{ asset('/js/app.min.js') }}" type="text/javascript"></script> --}}
 <script src="{{ asset('/backend/dist/js/app.min.js') }}" type="text/javascript"></script>
-<!-- fullCalendar 2.2.5 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-<script src="{{ asset('/backend/plugins/fullcalendar/fullcalendar.min.js') }}" type="text/javascript"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('/backend/dist/js/demo.js') }}" type="text/javascript"></script>
+
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $(".select2").select2();
+    });
+</script>

@@ -92,6 +92,7 @@ class SearchController extends Controller
 
 	        //cek apakah kata yang dicari ada dalam history
 	        $story = History::where('kata', '=', $request['word'])->first();
+	        //jika ada maka update
 	        if ($story) {
 		   		$story->kata = $request->get('word');
 		   		$story->valid = $valid;
@@ -105,6 +106,7 @@ class SearchController extends Controller
 				return view('welcome', compact('search','blacklist','data'));
 			}
 
+			//jikatodak ada maka buat baru
 			else
 			{
 				$history = new History(array(

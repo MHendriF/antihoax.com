@@ -6,7 +6,7 @@
     @include('backend.layouts.includes.htmlheader')
 @show
 
-<body class="skin-blue sidebar-mini">
+<body class="skin-yellow sidebar-mini">
 
 <div class="wrapper">
 

@@ -2,7 +2,7 @@
 
 <html lang="en">
 
-@section('htmlheader_title', 'List Website')
+@section('htmlheader_title', 'List News')
     @include('backend.layouts.includes.htmlheader')
 @show
 
@@ -17,8 +17,8 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-    @section('contentheader_title', 'List Website')
-    @section('contentheader_message', 'List Website')
+    @section('contentheader_title', 'List News')
+    @section('contentheader_message', 'List News')
         @include('backend.layouts.partials.contentheader')
         
         <!-- Main content -->
@@ -31,8 +31,8 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Database Website</h3>
-                   <a href="{{ url('website/create') }}" class="btn btn-primary btn-xs"><i class="fa fa-plus-square"></i> Add Website</a>
+                  <h3 class="box-title">Database News</h3>
+                   <a href="{{ url('news/create') }}" class="btn btn-primary btn-xs"><i class="fa fa-plus-square"></i> Add News</a>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -40,16 +40,34 @@
                     <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Domain / Alamat Website</th>
+                      <th>Keyword Search</th>
                       <th>Category</th>
+                      <th>Set Valid</th>
+                      <th>Set Hoax</th>
                     </tr>
                     </thead>
                     <tbody>
-                      @foreach($data as $index => $web)       
+                      @foreach($data as $index => $news)       
                       <tr>
                         <td>{{ $index +1 }}</td>
-                        <td>{{ $web->alamat }}</td>
-                        <td>{{ $web->category }}</td>
+                        <td>{{ $news->kata }}</td>
+                        <td>{{ $news->category }}</td>
+                        <td>
+                          <form action="{{ url('news/'.$news->id) }}" method="post">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="_method" value="PUT">
+                            <input type="hidden" name="category" class="form-control" value="Valid">
+                            <center><button type="submit" class="btn btn-success btn-sm"><i class="fa fa-check-square-o">Valid</i></button></center>
+                          </form>
+                      </td>
+                      <td>
+                          <form action="{{ url('news/'.$news->id) }}" method="post">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="_method" value="PUT">
+                            <input type="hidden" name="category" class="form-control" value="Hoax">
+                            <center><button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-close"></i>Hoax</button></center>
+                          </form>
+                      </td>
                       </tr>
                       @endforeach
 
