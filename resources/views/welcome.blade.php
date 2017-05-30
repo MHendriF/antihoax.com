@@ -389,21 +389,21 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="frontend/img/search.png" style="max-width: 50%;" class="img-responsive img-circle" alt="">
+                        <img src="frontend/img/detect.png" style="max-width: 50%;" class="img-responsive" alt="">
                         <h4 class="heading">HOAX DETECTOR</h4>
                         <p class="text-muted">disini penjelasan hoax detector</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="frontend/img/search.png" style="max-width: 50%;" class="img-responsive img-circle" alt="">
+                        <img src="frontend/img/find.png" style="max-width: 50%;" class="img-responsive" alt="">
                         <h4 class="heading">RECENT SEARCH</h4>
                         <p class="text-muted">disini penjelasan recent search</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="frontend/img/team/man-1.png" style="max-width: 50%;" class="img-responsive img-circle" alt="">
+                        <img src="frontend/img/examples.jpg" style="max-width: 50%;" class="img-responsive" alt="">
                         <h4 class="heading">EXAMPLE OF HOAX</h4>
                         <p class="text-muted">disini penjelasan example of hoax</p>
                     </div>
@@ -412,21 +412,21 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="frontend/img/team/man-1.png" style="max-width: 50%;" class="img-responsive img-circle" alt="">
+                        <img src="frontend/img/people_question.png" style="max-width: 50%;" class="img-responsive" alt="">
                         <h4 class="heading">HOW TO DETECT HOAX</h4>
                         <p class="text-muted">disini penjelasan hoax detector</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="frontend/img/team/man-1.png" style="max-width: 50%;" class="img-responsive img-circle" alt="">
+                        <img src="frontend/img/team/man-1.png" style="max-width: 50%;" class="img-responsive" alt="">
                         <h4 class="heading">ABOUT</h4>
                         <p class="text-muted">disini penjelasan recent search</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="frontend/img/team/man-1.png" style="max-width: 50%;" class="img-responsive img-circle" alt="">
+                        <img src="frontend/img/question.png" style="max-width: 50%;" class="img-responsive" alt="">
                         <h4 class="heading">HELP</h4>
                         <p class="text-muted">disini penjelasan example of hoax</p>
                     </div>
