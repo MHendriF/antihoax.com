@@ -74,6 +74,9 @@
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="#help">Help</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -162,7 +165,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Recent Search of Hoax</h2>
-                    <h3 class="section-subheading text-muted">"We Concern To Prevent The Spread Of Fake News Around The World."</h3>
+                    <h3 class="section-subheading text-muted">"Some people gave us some clue!"</h3>
                 </div>
                 <table>
                     <tr>
@@ -190,7 +193,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Example of Hoax</h2>
-                    <h3 class="section-subheading text-muted">"We Concern To Prevent The Spread Of Fake News Around The World."</h3>
+                    <h3 class="section-subheading text-muted">"We have some Hoax around You!"</h3>
                 </div>
             </div>
             <div class="row">
@@ -283,7 +286,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">How To Detect Hoax</h2>
-                    <h3 class="section-subheading text-muted">"We Concern To Prevent The Spread Of Fake News Around The World."</h3>
+                    <h3 class="section-subheading text-muted">"An Amazing 6 steps to make your life easier!"</h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -293,7 +296,7 @@
                         <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Check The URL</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">If the site has a strange or unfamiliar name, stop right there and search for the same story on Google or elsewhere. If it doesn't show up anywhere else, that's a big problem.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -301,7 +304,7 @@
                         <i class="fa fa-file-o fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Read The About Page</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Be wary of sites without an About page, or that don't tell you exactly who is running the website.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -309,7 +312,7 @@
                         <i class="fa fa-quote-right fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Check The Quote</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Fake news often relies on made-up quotes to make the story seem real. If you search for it and no reputable media outlet has it, that could mean it's not a real quote.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -317,7 +320,7 @@
                         <i class="fa fa-link fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Check The Link Inside The Pages</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Fake news articles often make big claims but don't supply any evidence to back them up. Pay close attention to where any claims are coming from. Do they cite specific people or organizations? Do they talk about other media coverage but not link to it?</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -325,7 +328,7 @@
                         <i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Do Reverse Image Search</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">If you use Chrome as your web browser simply right click on an image and select "Search Google for Image." Another easy way to reverse image search is to go to Google Images, click on the camera icon and then upload the photo you're trying to search for.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -333,7 +336,7 @@
                         <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">If It Seems So Perfect, Slow Down!</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Fake news is often engineered to appeal to your emotions, or to seem like a crazy thing that could happen. Rather than instantly believing and sharing it, wait and see if more information comes out. Taking a breath and keeping an open (but skeptical!) mind will never steer you wrong.</p>
                 </div>
             </div>
         </div>
@@ -345,7 +348,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About Us</h2>
-                    <h3 class="section-subheading text-muted">"We Concern To Prevent The Spread Of Fake News Around The World."</h3>
+                    <h3 class="section-subheading text-muted">"We are called to focus on you!"</h3>
                 </div>
             </div>
             <div class="row">
@@ -360,7 +363,7 @@
                     <div class="team-member">
                         <img src="frontend/img/team/man-2.png" style="max-width: 50%;" class="img-responsive img-circle" alt="">
                         <h4>Andy Yohanes H</h4>
-                        <p class="text-muted">5114100064</p>
+                        <p class="text-muted">5114100050</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -380,17 +383,53 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">HELP</h2>
+                    <h3 class="section-subheading text-muted">"Your guideline to prevent the Hoax!"</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4">
-                    
+                    <div class="team-member">
+                        <img src="frontend/img/search.png" style="max-width: 50%;" class="img-responsive img-circle" alt="">
+                        <h4 class="heading">HOAX DETECTOR</h4>
+                        <p class="text-muted">disini penjelasan hoax detector</p>
+                    </div>
                 </div>
                 <div class="col-sm-4">
-                    
+                    <div class="team-member">
+                        <img src="frontend/img/search.png" style="max-width: 50%;" class="img-responsive img-circle" alt="">
+                        <h4 class="heading">RECENT SEARCH</h4>
+                        <p class="text-muted">disini penjelasan recent search</p>
+                    </div>
                 </div>
                 <div class="col-sm-4">
-                    
+                    <div class="team-member">
+                        <img src="frontend/img/team/man-1.png" style="max-width: 50%;" class="img-responsive img-circle" alt="">
+                        <h4 class="heading">EXAMPLE OF HOAX</h4>
+                        <p class="text-muted">disini penjelasan example of hoax</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="frontend/img/team/man-1.png" style="max-width: 50%;" class="img-responsive img-circle" alt="">
+                        <h4 class="heading">HOW TO DETECT HOAX</h4>
+                        <p class="text-muted">disini penjelasan hoax detector</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="frontend/img/team/man-1.png" style="max-width: 50%;" class="img-responsive img-circle" alt="">
+                        <h4 class="heading">ABOUT</h4>
+                        <p class="text-muted">disini penjelasan recent search</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="frontend/img/team/man-1.png" style="max-width: 50%;" class="img-responsive img-circle" alt="">
+                        <h4 class="heading">HELP</h4>
+                        <p class="text-muted">disini penjelasan example of hoax</p>
+                    </div>
                 </div>
             </div>
         </div>
