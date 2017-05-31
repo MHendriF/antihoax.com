@@ -17,8 +17,8 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-    @section('contentheader_title', 'History Pencarian')
-    @section('contentheader_message', 'History Pencarian')
+    @section('contentheader_title', 'Search History')
+    @section('contentheader_message', 'Search History')
         @include('backend.layouts.partials.contentheader')
         
         <!-- Main content -->
@@ -29,9 +29,9 @@
           {{-- @include('layouts.includes._message') --}}
           <div class="row">
             <div class="col-xs-12">
-              <div class="box">
+              <div class="box box-warning">
                 <div class="box-header">
-                  <h3 class="box-title">History Pencarian</h3>
+                  <h3 class="box-title">Search History</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -39,7 +39,8 @@
                     <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Kata Pencarian</th>
+                      <th>Keyword Search</th>
+                      <th>News Category</th>
                       <th>Valid</th>
                       <th>Hoax</th>
                       <th>Unknown</th>
@@ -49,7 +50,8 @@
                       @foreach($data as $index => $history)       
                       <tr>
                         <td>{{ $index +1 }}</td>
-                        <td>{{ $history->kata }}</td>
+                        <td>{{ $history->keyword }}</td>
+                        <td>{{ $history->category }}</td>
                         <td>{{ $history->valid }} %</td>
                         <td>{{ $history->hoax }} %</td>
                         <td>{{ $history->unknown }} %</td>

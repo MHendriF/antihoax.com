@@ -23,7 +23,7 @@ class SearchController extends Controller
 	    	$data = History::orderBy('id', 'DESC')->take(5)->get();
 	    	
 	    	$valid = 0;
-	    	$blacklist = 0;
+	    	$hoax = 0;
 	    	$unknown = 0;
 	    	$n = count($database)-1;
 
@@ -54,7 +54,7 @@ class SearchController extends Controller
 		    	//Get Query from database
 		    	for($j=0; $j<count($database); $j++) 
 				{
-					$db[$j] = $database[$j]->alamat;
+					$db[$j] = $database[$j]->address;
 			  		// echo $db[$i];
 			  		// echo "\r\n";
 
@@ -63,7 +63,7 @@ class SearchController extends Controller
 			    	$pos = strpos($mystring, $findme);
 					if($pos !== false)
 					{
-						if($database[$j]->category == "Valid")
+						if($database[$j]->type == "Valid")
 						{
 							$valid = $valid + 10;
 							//echo "valid = '$valid'\n";
@@ -71,9 +71,9 @@ class SearchController extends Controller
 						    //echo " and exists at position $pos\n";
 							break;
 						}
-						elseif($database[$j]->category == "Blacklist")
+						elseif($database[$j]->type == "Hoax")
 						{
-							$blacklist = $blacklist + 10;
+							$hoax = $hoax + 10;
 							//echo "blacklist = '$blacklist'\n";
 							//echo "The string '$findme' was found in the string '$mystring'\n";
 						    //echo " and exists at position $pos\n";
@@ -91,38 +91,40 @@ class SearchController extends Controller
 	        }
 
 	        //cek apakah kata yang dicari ada dalam history
-	        $story = History::where('kata', '=', $request['word'])->first();
+	        $story = History::where('keyword', '=', $request['word'])->first();
 	        //jika ada maka update
 	        if ($story) {
-		   		$story->kata = $request->get('word');
+		   		$story->keyword = $request->get('word');
+		   		$story->category = "Umum";
 		   		$story->valid = $valid;
-		   		$story->hoax = $blacklist;
+		   		$story->hoax = $hoax;
 		   		$story->unknown = $unknown;
 		   		$story->save();
 
-		   		Session::flash('blacklist', $blacklist);
+		   		Session::flash('hoax', $hoax);
 			    Session::flash('unknown', $unknown);
 			    Session::flash('valid', $valid);
-				return view('welcome', compact('search','blacklist','data'));
+				return view('welcome', compact('search','hoax','data'));
 			}
 
 			//jikatodak ada maka buat baru
 			else
 			{
 				$history = new History(array(
-					'kata'    => $request->get('word'),
-					'valid'   => $valid,
-					'hoax'    => $blacklist,
-					'unknown' => $unknown
+					'keyword'  => $request->get('word'),
+					'category' => "Umum",
+					'valid'    => $valid,
+					'hoax'     => $hoax,
+					'unknown'  => $unknown
 	         	));
 
 		        if($history->save())
 		        {
-		        	Session::flash('blacklist', $blacklist);
+		        	Session::flash('hoax', $hoax);
 			        Session::flash('unknown', $unknown);
 			        Session::flash('valid', $valid);
 
-			        return view('welcome', compact('search','blacklist','data'));
+			        return view('welcome', compact('search','hoax','data'));
 		        }
 			}
 

@@ -6,39 +6,37 @@ use Illuminate\Http\Request;
 
 use App\Website;
 use App\History;
-
+use Session;
 
 class AdminController extends Controller
 {
     public function index()
     {
-    	//return view('backend.auth.login');
         $data = Website::all();
-        return view('backend.admin.website', compact('data'));
+        return view('backend.admin.website.website', compact('data'));
     }
 
     public function history()
     {
-        //return view('backend.auth.login');
         $data = History::all();
-        return view('backend.admin.history', compact('data'));
+        return view('backend.admin.history.history', compact('data'));
     }
 
     public function create()
     {
-        return view('backend.admin.add_website');
+        return view('backend.admin.website.add_website');
     }
 
     public function store(Request $request)
     {
        $this->validate($request, array(
-            'alamat'     => 'required|max:100',
-            'category'   => 'required'
+            'address'     => 'required|max:100',
+            'type'   => 'required'
             ));
 
         Website::create($request->all());
 
-        //Session::flash('new', 'New room was successfully added!');
+        Session::flash('new', 'New website was successfully added!');
         return redirect('website');
     }
 

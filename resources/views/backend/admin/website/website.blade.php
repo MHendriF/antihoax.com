@@ -29,10 +29,10 @@
           {{-- @include('layouts.includes._message') --}}
           <div class="row">
             <div class="col-xs-12">
-              <div class="box">
-                <div class="box-header">
+              <div class="box box-warning">
+                <div class="box-header with-border">
                   <h3 class="box-title">Database Website</h3>
-                   <a href="{{ url('website/create') }}" class="btn btn-primary btn-xs"><i class="fa fa-plus-square"></i> Add Website</a>
+                   <a href="{{ url('website/create') }}" class="btn btn-primary btn-xs" style="margin-top: -5px;margin-left: 10px;"><i class="fa fa-plus-square" style="margin-right: 6px;"></i>Add Website</a>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -48,8 +48,8 @@
                       @foreach($data as $index => $web)       
                       <tr>
                         <td>{{ $index +1 }}</td>
-                        <td>{{ $web->alamat }}</td>
-                        <td>{{ $web->category }}</td>
+                        <td>{{ $web->address }}</td>
+                        <td>{{ $web->type }}</td>
                       </tr>
                       @endforeach
 

@@ -15,7 +15,8 @@ class HistoryTable extends Migration
     {
         Schema::create('history', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('kata');
+            $table->string('keyword');
+            $table->string('category');
             $table->integer('valid');
             $table->integer('hoax');
             $table->integer('unknown');

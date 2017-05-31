@@ -9,6 +9,6 @@ class History extends Model
     protected $table = 'history';
 
     protected $fillable = [
-        'kata', 'valid', 'hoax', 'unknown',
+        'keyword', 'category', 'valid', 'hoax', 'unknown',
     ];
 }

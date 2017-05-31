@@ -9,6 +9,6 @@ class News extends Model
     protected $table = 'news';
 
     protected $fillable = [
-        'kata', 'category',
+        'keyword', 'category', 'type',
     ];
 }

@@ -2,7 +2,7 @@
 
 <html lang="en">
 
-@section('htmlheader_title', 'Add News')
+@section('htmlheader_title', 'Add Website')
     @include('backend.layouts.includes.htmlheader')
 @show
 
@@ -17,8 +17,8 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-    @section('contentheader_title', 'Add News')
-    @section('contentheader_message', 'Add News')
+    @section('contentheader_title', 'Add Website')
+    @section('contentheader_message', 'Add Website')
         @include('backend.layouts.partials.contentheader')
         
         <!-- Main content -->
@@ -29,9 +29,9 @@
             <!-- left column -->
             <div class="col-md-6 col-md-offset-3">
               <!-- general form elements -->
-              <div class="box box-primary">
+              <div class="box box-warning">
                  <div class="register-logo">
-                    <b>Form Add News</b>
+                    <b>Form Add Website</b>
                 </div>
                 <!-- /.box-header -->
                 @if (count($errors) > 0)
@@ -46,23 +46,25 @@
                 @endif
 
                 <!-- form start -->
-                <form action="{{ url('news') }}" method="post" >
+                <form action="{{ url('website') }}" method="post" >
                   {{ csrf_field() }}
                   <div class="box-body">
                     <div class="form-group">
-                      <label>Key word search</label>
-                      <input class="form-control" type="text" name="kata" placeholder="Enter search word">
+                      <label>Website Address Or Domain</label>
+                      <textarea class="form-control" rows="3" placeholder="Enter the website address or domain..." name="address"></textarea>
                     </div>
                     <div class="form-group">
                       <label>Category</label>
-                       <select class="form-control select2" name="category" style="width: 100%;">
+                       <select class="form-control select2" style="width: 100%;" name="type">
                         <option selected="selected">Valid</option>
                         <option>Hoax</option>
+                        <option>Unknown</option>
                       </select>
                     </div>
                   </div>
                   <!-- /.box-body -->
                   <div class="box-footer">
+                    {{-- <button type="submit" class="btn btn-default">Cancel</button> --}}
                     <button type="submit" class="btn btn-primary pull-right">Submit</button>
                   </div>
                   <!-- /.box-footer -->
@@ -86,8 +88,5 @@
 @section('scripts')
     @include('backend.layouts.includes.scripts')
 @show
-
-  
-
 </body>
 </html>

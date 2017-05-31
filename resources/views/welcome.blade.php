@@ -169,14 +169,16 @@
                 </div>
                 <table>
                     <tr>
-                        <th>Kata Pencarian</th>
+                        <th>Keyword Search</th>
+                        <th>Category</th>
                         <th>Valid</th>
                         <th>Hoax</th>
                         <th>Unknown</th>
                     </tr>
                     @foreach($data as $history)       
                     <tr>
-                        <td>{{ $history->kata }}</td>
+                        <td>{{ $history->keyword }}</td>
+                        <td>{{ $history->category }}</td>
                         <td>{{ $history->valid }} %</td>
                         <td>{{ $history->hoax }} %</td>
                         <td>{{ $history->unknown }} %</td>
@@ -647,30 +649,22 @@
 
     <!-- jQuery -->
     <script src="{{ asset('/frontend/vendor/jquery/jquery2.min.js') }}"></script>
-
     <!-- Sweet modal js -->
     <script src="{{ asset('/frontend/js/sweet-modal/dist/min/jquery.sweet-modal.min.js') }}"></script>
-
     <!-- Sweetalert2 js -->
     <script src="{{ asset('/frontend/js/sweetalert2/dist/sweetalert2.min.js') }}"></script>
-
     <!-- Bootstrap Core JavaScript -->
-     <script src="{{ asset('/frontend/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-
+    <script src="{{ asset('/frontend/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
-
     <!-- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
-
     <!-- Contact Form JavaScript -->
     <script src="{{ asset('/frontend/js/jqBootstrapValidation.js') }}"></script>
     <script src="{{ asset('/frontend/js/contact_me.js') }}"></script>
-
     <!-- Theme JavaScript -->
     <script src="{{ asset('/frontend/js/agency.js') }}"></script>
     <script data-pace-options='{ "ghostTime": 4000 }' src="{{ asset('/frontend/js/pace.min.js') }}"></script>
-
     <!-- page script -->
     <script type="text/javascript">
         // To make Pace works on Ajax calls
@@ -682,79 +676,32 @@
         });
     </script>
 
-    {{-- <script type="text/javascript">
-        $(document).ajaxStart(function() { Pace.restart(); });
-        $('#loading').click(function(){
-            $('#loading-content').html('<img src="frontend/img/loading2.gif" style="margin-top: -7px;margin-left: 10px;">');
-            $.ajax({
-                type: 'get', // or post?
-                dataType: 'json',
-                url: '{!!URL::to('search')!!}', // change as needed
-                data: "word",//requestData, // if you are posting
-                success: function(data) {
-                    if (data.success) {
-                        // notice that we are expecting a json array with success = true and a payload
-                        $('#myModal').empty().append(data.payload).modal();
-                        console.log(data);
-                    } else {
-                        // for debugging    
-                        alert(data);
-                    }
-                },
-                error: function(xhr, textStatus, thrownError) {
-                    alert(xhr.status);
-                    alert(thrownError);
-                }
-            });
-        });
-    </script> --}}
-
     <script>
       $(document).ready(function() {
           @if(Session::has('valid'))
-                @if($blacklist == 0)
+                @if($hoax == 0)
                 $.sweetModal({
                     title: 'Result search: {{$search}}',
                     content: '<p>Persentasi Valid</p><div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('valid') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('valid') }}%">{{ Session::get('valid') }}% Valid</div></div><p>Persentasi Uknown</p><div class="progress"><div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('unknown') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('unknown') }}%">{{ Session::get('unknown') }}% Uknown</div></div>'
                         
 
                 });
-                @elseif($blacklist > 0)
+                @elseif($hoax > 0)
                 $.sweetModal({
                     title: 'Result search: {{$search}}',
-                    content: '<p>Persentasi Valid</p><div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('valid') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('valid') }}%">{{ Session::get('valid') }}% Valid</div></div><p>Persentasi Uknown</p><div class="progress"><div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('unknown') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('unknown') }}%">{{ Session::get('unknown') }}% Uknown</div></div><p>Persentasi Hoax</p><div class="progress"><div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('blacklist') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('blacklist') }}%">{{ Session::get('blacklist') }}% Hoax</div></div>'
+                    content: '<p>Persentasi Valid</p><div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('valid') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('valid') }}%">{{ Session::get('valid') }}% Valid</div></div><p>Persentasi Uknown</p><div class="progress"><div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('unknown') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('unknown') }}%">{{ Session::get('unknown') }}% Uknown</div></div><p>Persentasi Hoax</p><div class="progress"><div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('hoax') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('hoax') }}%">{{ Session::get('hoax') }}% Hoax</div></div>'
                 });
                 @endif
           @endif
         });
     </script>
 
-    {{-- <script>
-      $(document).ready(function() {
-          @if(Session::has('valid'))
-                @if($unknown >= 50)
-                $.sweetModal({
-                    title: 'Result',
-                    content: '<p>Persentasi Valid</p><div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('valid') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('valid') }}%">{{ Session::get('valid') }}% Valid</div></div><p>Persentasi Uknown</p><div class="progress"><div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('unknown') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('unknown') }}%">{{ Session::get('unknown') }}% Uknown</div></div><p>Detail</p><ul><li>Sumber berita banyak yang tidak terpercaya</li></ul>'
-                        
-
-                });
-                @elseif($blacklist > 0)
-                $.sweetModal({
-                    title: 'Result',
-                    content: '<p>Persentasi Valid</p><div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('valid') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('valid') }}%">{{ Session::get('valid') }}% Valid</div></div><p>Persentasi Uknown</p><div class="progress"><div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('unknown') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('unknown') }}%">{{ Session::get('unknown') }}% Uknown</div></div><p>Persentasi Hoax</p><div class="progress"><div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('blacklist') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('blacklist') }}%">{{ Session::get('blacklist') }}% Hoax</div></div>'
-                });
-                @endif
-          @endif
-        });
-    </script> --}}
-
     <script type="text/javascript">
         function loading()
         {
            var a=document.getElementById("loading_img");
            //a.innerHTML+="<img src="frontend/img/loading2.gif" style="margin-top: -7px;margin-left: 10px;">";
-           a.innerHTML+="<p>Sedang Belajar JavaScript, Semangat...!!!</p>";
+           
         }
     </script>
 

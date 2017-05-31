@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="{{ asset('/backend/plugins/datatables/dataTables.bootstrap.css')}}">
     <!-- Select2 -->
     <link rel="stylesheet" href="{{ asset('/backend/plugins/select2/select2.min.css')}}">
+    <!-- Animate -->
+    <link rel="stylesheet" href="{{ asset("/backend/plugins/animate/animate.min.css")}}">
+    <!-- PNotify -->
+    <link rel="stylesheet" href="{{ asset("/backend/plugins/pnotify/dist/pnotify.css") }}">
+    <link rel="stylesheet" href="{{ asset("/backend/plugins/pnotify/dist/pnotify.buttons.css") }}">
+    <link rel="stylesheet" href="{{ asset("/backend/plugins/pnotify/dist/pnotify.nonblock.css") }}">
+
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('/backend/dist/css/AdminLTE.min.css') }}">
     <!-- Skin -->
