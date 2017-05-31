@@ -116,6 +116,9 @@
             </form>
             <div id="loading-content">
             </div>
+            <div class="col-lg-12 text-center">
+                <a class="page-scroll" href="#help">Need Help?</a>
+            </div>
         </div>
     </section>
 
@@ -389,50 +392,27 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-lg-4">
                     <div class="team-member">
-                        <img src="frontend/img/detect.png" style="max-width: 50%;" class="img-responsive" alt="">
-                        <h4 class="heading">HOAX DETECTOR</h4>
-                        <p class="text-muted">disini penjelasan hoax detector</p>
+                        <img src="frontend/img/homepage.png" style="max-width: 100%;" class="img-responsive" alt="">
+                        <h4 class="heading">Click the Hoax Detector Button</h4>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-lg-4">
                     <div class="team-member">
-                        <img src="frontend/img/find.png" style="max-width: 50%;" class="img-responsive" alt="">
-                        <h4 class="heading">RECENT SEARCH</h4>
-                        <p class="text-muted">disini penjelasan recent search</p>
+                        <img src="frontend/img/hoax_detector.png" style="max-width: 87%;" class="img-responsive" alt="">
+                        <h4 class="heading">Insert the words that you want to find out</h4>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-lg-4">
                     <div class="team-member">
                         <img src="frontend/img/examples.jpg" style="max-width: 50%;" class="img-responsive" alt="">
-                        <h4 class="heading">EXAMPLE OF HOAX</h4>
-                        <p class="text-muted">disini penjelasan example of hoax</p>
+                        <h4 class="heading">Get the Result</h4>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="frontend/img/people_question.png" style="max-width: 50%;" class="img-responsive" alt="">
-                        <h4 class="heading">HOW TO DETECT HOAX</h4>
-                        <p class="text-muted">disini penjelasan hoax detector</p>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="frontend/img/team/man-1.png" style="max-width: 50%;" class="img-responsive" alt="">
-                        <h4 class="heading">ABOUT</h4>
-                        <p class="text-muted">disini penjelasan recent search</p>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="frontend/img/question.png" style="max-width: 50%;" class="img-responsive" alt="">
-                        <h4 class="heading">HELP</h4>
-                        <p class="text-muted">disini penjelasan example of hoax</p>
-                    </div>
-                </div>
+            <div class="col-lg-12 text-center">
+                <a class="page-scroll" href="#detector">Try it Now</a>
             </div>
         </div>
     </section>
