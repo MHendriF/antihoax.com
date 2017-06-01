@@ -44,6 +44,7 @@
                       <th>Valid</th>
                       <th>Hoax</th>
                       <th>Unknown</th>
+                      <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -55,6 +56,13 @@
                         <td>{{ $history->valid }} %</td>
                         <td>{{ $history->hoax }} %</td>
                         <td>{{ $history->unknown }} %</td>
+                        <td>
+                          <center>
+                            <div class="btn-group">
+                              <a href="{{ url('history/'.$history->id.'/edit') }}" class="btn btn-success btn-xs"><i class="fa fa-pencil" style="margin-right: 6px;"></i>Edit</a>
+                            </div>
+                          </center>
+                          </td>
                       </tr>
                       @endforeach
                     </tbody>

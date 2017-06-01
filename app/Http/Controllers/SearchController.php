@@ -35,7 +35,7 @@ class SearchController extends Controller
 		    $googleClient = new GoogleClient($browser);
 
 		    // Create the url that will be parsed
-		    $search = $request['word'];
+		    $search = $request['keyword'];
 		    $googleUrl = new GoogleUrl();
 		    $googleUrl->setSearchTerm($search);
 		    $response = $googleClient->query($googleUrl);
@@ -66,17 +66,11 @@ class SearchController extends Controller
 						if($database[$j]->type == "Valid")
 						{
 							$valid = $valid + 10;
-							//echo "valid = '$valid'\n";
-							//echo "The string '$findme' was found in the string '$mystring'\n";
-						    //echo " and exists at position $pos\n";
 							break;
 						}
 						elseif($database[$j]->type == "Hoax")
 						{
 							$hoax = $hoax + 10;
-							//echo "blacklist = '$blacklist'\n";
-							//echo "The string '$findme' was found in the string '$mystring'\n";
-						    //echo " and exists at position $pos\n";
 							break;
 						}
 					}
@@ -91,10 +85,10 @@ class SearchController extends Controller
 	        }
 
 	        //cek apakah kata yang dicari ada dalam history
-	        $story = History::where('keyword', '=', $request['word'])->first();
+	        $story = History::where('keyword', '=', $request['keyword'])->first();
 	        //jika ada maka update
 	        if ($story) {
-		   		$story->keyword = $request->get('word');
+		   		$story->keyword = $request->get('keyword');
 		   		$story->category = "Umum";
 		   		$story->valid = $valid;
 		   		$story->hoax = $hoax;
@@ -104,14 +98,14 @@ class SearchController extends Controller
 		   		Session::flash('hoax', $hoax);
 			    Session::flash('unknown', $unknown);
 			    Session::flash('valid', $valid);
-				return view('welcome', compact('search','hoax','data'));
+				return view('welcome', compact('search','hoax','data','results'));
 			}
 
 			//jikatodak ada maka buat baru
 			else
 			{
 				$history = new History(array(
-					'keyword'  => $request->get('word'),
+					'keyword'  => $request->get('keyword'),
 					'category' => "Umum",
 					'valid'    => $valid,
 					'hoax'     => $hoax,
@@ -124,7 +118,7 @@ class SearchController extends Controller
 			        Session::flash('unknown', $unknown);
 			        Session::flash('valid', $valid);
 
-			        return view('welcome', compact('search','hoax','data'));
+			        return view('welcome', compact('search','hoax','data','results'));
 		        }
 			}
 

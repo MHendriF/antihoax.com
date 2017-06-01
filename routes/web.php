@@ -34,7 +34,9 @@ Route::get('/home', 'HomeController@index');
 route::resource('website', 'AdminController');
 route::resource('news', 'NewsController');
 
-route::get('history', 'AdminController@history');
+Route::resource('history', 'HistoryController');
+Route::post('history/{id}', 'HistoryController@update');	
+
 Route::get('result', 'HoaxDetectorController@result');
-//Route::get('search', 'SearchController@search');
-Route::post('search', 'SearchController@search');
+Route::get('search', 'SearchController@search');
+//Route::post('search', 'SearchController@search');

@@ -103,10 +103,10 @@
                     <h3 class="section-subheading text-muted">"We Concern To Prevent The Spread Of Fake News Around The World."</h3>
                 </div>
             </div>
-            <form method="post" action="{{ url('search') }}" role="search" class="col-md-6 text-center col-md-offset-3">
-                {!! csrf_field() !!}
+            <form method="get" action="{{ url('search') }}" role="search" class="col-md-6 text-center col-md-offset-3">
+                {{-- {!! csrf_field() !!} --}}
                 <div class="input-group">
-                    <input type="text" name="word" value="{{$search}}" class="form-control" placeholder="Enter the keyword search ....">
+                    <input type="text" name="keyword" value="{{$search}}" class="form-control" placeholder="Enter the keyword search ....">
                     <div class="input-group-btn">
                         <button id="loading" class="btn btn-default" {{-- data-toggle="modal" data-target="#myModal" --}} type="submit">
                             <i class="glyphicon glyphicon-search"></i>
@@ -659,19 +659,19 @@
     <script>
       $(document).ready(function() {
           @if(Session::has('valid'))
+            @if(isset($hoax))
                 @if($hoax == 0)
                 $.sweetModal({
                     title: 'Result search: {{$search}}',
-                    content: '<p>Persentasi Valid</p><div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('valid') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('valid') }}%">{{ Session::get('valid') }}% Valid</div></div><p>Persentasi Uknown</p><div class="progress"><div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('unknown') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('unknown') }}%">{{ Session::get('unknown') }}% Uknown</div></div>'
-                        
-
+                    content: '<strong>Persentasi Valid</strong><div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('valid') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('valid') }}%">{{ Session::get('valid') }}% Valid</div></div><strong>Persentasi Uknown</strong><div class="progress"><div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('unknown') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('unknown') }}%">{{ Session::get('unknown') }}% Uknown</div></div> <p class="lead"; style="margin-top: 40px">Reference: </p> @foreach($results as $web)<mark style="font-size: 17px">{{$web->title}}</mark><p style="margin-bottom: 0">{{$web->url}}</p><p style="line-height: 20px">{{$web->description}}</p>@endforeach'
                 });
                 @elseif($hoax > 0)
                 $.sweetModal({
                     title: 'Result search: {{$search}}',
-                    content: '<p>Persentasi Valid</p><div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('valid') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('valid') }}%">{{ Session::get('valid') }}% Valid</div></div><p>Persentasi Uknown</p><div class="progress"><div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('unknown') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('unknown') }}%">{{ Session::get('unknown') }}% Uknown</div></div><p>Persentasi Hoax</p><div class="progress"><div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('hoax') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('hoax') }}%">{{ Session::get('hoax') }}% Hoax</div></div>'
+                    content: '<strong>Persentasi Valid</strong><div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('valid') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('valid') }}%">{{ Session::get('valid') }}% Valid</div></div><strong>Persentasi Uknown</strong><div class="progress"><div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('unknown') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('unknown') }}%">{{ Session::get('unknown') }}% Uknown</div></div><strong>Persentasi Hoax</strong><div class="progress"><div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="{{ Session::get('hoax') }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ Session::get('hoax') }}%">{{ Session::get('hoax') }}% Hoax</div></div>  <p class="lead"; style="margin-top: 40px">Reference: </p> @foreach($results as $web)<mark style="font-size: 17px">{{$web->title}}</mark><p style="margin-bottom: 0">{{$web->url}}</p><p style="line-height: 20px">{{$web->description}}</p>@endforeach'
                 });
                 @endif
+            @endif
           @endif
         });
     </script>

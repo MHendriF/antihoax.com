@@ -16,11 +16,6 @@ class AdminController extends Controller
         return view('backend.admin.website.website', compact('data'));
     }
 
-    public function history()
-    {
-        $data = History::all();
-        return view('backend.admin.history.history', compact('data'));
-    }
 
     public function create()
     {
@@ -47,13 +42,11 @@ class AdminController extends Controller
 
     public function edit($id)
     {
-       
     }
 
     
     public function update(Request $request, $id)
     {
-       
     }
 
     
