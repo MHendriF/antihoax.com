@@ -66,7 +66,8 @@ class WebSeeder extends Seeder
             array('address'=>'jurnalmuslim.com', 'type'=>'Hoax'),
             array('address'=>'islamnkri.info', 'type'=>'Hoax'),
             // array('address'=>'', 'type'=>'Blacklist'),
-            // array('address'=>'', 'type'=>'Valid'),
+            
+            array('address'=>'kalender.web', 'type'=>'Valid'),
             array('address'=>'zenius.net', 'type'=>'Valid'),
             array('address'=>'liburnasional.com', 'type'=>'Valid'),
             array('address'=>'muslim.or.id', 'type'=>'Valid'),

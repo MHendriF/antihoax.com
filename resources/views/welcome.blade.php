@@ -103,10 +103,10 @@
                     <h3 class="section-subheading text-muted">"We Concern To Prevent The Spread Of Fake News Around The World."</h3>
                 </div>
             </div>
-            <form method="post" {{-- action="#" --}} action="{{ url('search') }}" role="search" class="col-md-6 text-center col-md-offset-3">
+            <form method="post" action="{{ url('search') }}" role="search" class="col-md-6 text-center col-md-offset-3">
                 {!! csrf_field() !!}
                 <div class="input-group">
-                    <input type="text" name="word" value="{{$search}}" class="form-control" placeholder="Search word ....">
+                    <input type="text" name="word" value="{{$search}}" class="form-control" placeholder="Enter the keyword search ....">
                     <div class="input-group-btn">
                         <button id="loading" class="btn btn-default" {{-- data-toggle="modal" data-target="#myModal" --}} type="submit">
                             <i class="glyphicon glyphicon-search"></i>
@@ -116,7 +116,7 @@
             </form>
             <div id="loading-content">
             </div>
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 text-center" style="margin-top: 20px; font-size: 20px;">
                 <a class="page-scroll" href="#help">Need Help?</a>
             </div>
         </div>
@@ -400,18 +400,18 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="team-member">
-                        <img src="frontend/img/hoax_detector.png" style="max-width: 87%;" class="img-responsive" alt="">
+                        <img src="frontend/img/example_search3.png" style="max-width: 83%;" class="img-responsive" alt="">
                         <h4 class="heading">Insert the words that you want to find out</h4>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="team-member">
-                        <img src="frontend/img/examples.jpg" style="max-width: 50%;" class="img-responsive" alt="">
+                        <img src="frontend/img/result2.png" style="max-width: 100%; height: 190px;" class="img-responsive" alt="">
                         <h4 class="heading">Get the Result</h4>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 text-center" style="font-size: 20px;">
                 <a class="page-scroll" href="#detector">Try it Now</a>
             </div>
         </div>
