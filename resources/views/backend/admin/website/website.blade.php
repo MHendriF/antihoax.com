@@ -42,6 +42,9 @@
                       <th>ID</th>
                       <th>Domain / Alamat Website</th>
                       <th>Category</th>
+                      <th>Set Valid</th>
+                      <th>Set Unknown</th>
+                      <th>Set Hoax</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -50,6 +53,31 @@
                         <td>{{ $index +1 }}</td>
                         <td>{{ $web->address }}</td>
                         <td>{{ $web->type }}</td>
+                        <td>
+                          <form action="{{ url('website/'.$web->id) }}" method="post">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="_method" value="PUT">
+                            <input type="hidden" name="type" class="form-control" value="Valid">
+                            <center><button type="submit" class="btn btn-success btn-xs"><i class="fa fa-check-circle" style="margin-right: 6px;"></i>Valid</button></center>
+                          </form>
+                        </td>
+                        <td>
+                          <form action="{{ url('website/'.$web->id) }}" method="post">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="_method" value="PUT">
+                            <input type="hidden" name="type" class="form-control" value="Unknown">
+                            <center><button type="submit" class="btn btn-warning btn-xs"><i class="fa fa-check-circle" style="margin-right: 6px;"></i>Unknown</button></center>
+                          </form>
+                        </td>
+                        <td>
+                          <form action="{{ url('website/'.$web->id) }}" method="post">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="_method" value="PUT">
+                            <input type="hidden" name="type" class="form-control" value="Hoax">
+                            <center><button type="submit" class="btn btn-danger btn-xs"><i class="fa fa-check-circle" style="margin-right: 6px;"></i>Hoax</button></center>
+                          </form>
+                        </td>
+                        
                       </tr>
                       @endforeach
 

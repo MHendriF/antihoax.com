@@ -62,15 +62,15 @@
                             <input type="hidden" name="category" class="form-control" value="Valid">
                             <center><button type="submit" class="btn btn-success btn-xs"><i class="fa fa-check-circle" style="margin-right: 6px;"></i>Valid</button></center>
                           </form>
-                      </td>
-                      <td>
+                        </td>
+                        <td>
                           <form action="{{ url('news/'.$news->id) }}" method="post">
                             {{ csrf_field() }}
                             <input type="hidden" name="_method" value="PUT">
                             <input type="hidden" name="category" class="form-control" value="Hoax">
                             <center><button type="submit" class="btn btn-danger btn-xs"><i class="fa fa-ban" style="margin-right: 6px;"></i>Hoax</button></center>
                           </form>
-                      </td>
+                        </td>
                       </tr>
                       @endforeach
 

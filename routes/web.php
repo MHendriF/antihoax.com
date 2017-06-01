@@ -32,6 +32,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 route::resource('website', 'AdminController');
+route::post('website/{id}', 'AdminController@update');
 route::resource('news', 'NewsController');
 
 Route::resource('history', 'HistoryController');

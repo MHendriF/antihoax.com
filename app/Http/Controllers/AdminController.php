@@ -47,6 +47,9 @@ class AdminController extends Controller
     
     public function update(Request $request, $id)
     {
+        Website::find($id)->update($request->all());
+        Session::flash('update', 'Website was successfully updated!');
+        return redirect('website');
     }
 
     
