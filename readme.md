@@ -8,7 +8,7 @@
 </p>
 
 
-# FP Matakulian Interaksi Manusia Komputer
+# FP Matakuliah Interaksi Manusia Komputer
 
 ## Description
 
